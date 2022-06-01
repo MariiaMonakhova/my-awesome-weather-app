@@ -42,7 +42,7 @@ function getWeather(response) {
 }
 
 function searchCity(city) {
-  let apiKey = "c72f3fe8e8beb38ac78a224a26b2d893";
+  let apiKey = "3b1d3e0b3e9d98b9acd6bb3beed84bb6";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(getWeather);
 }
