@@ -25,7 +25,9 @@ h1 {
   margin-left: 5px;
 }
 form button:hover {
-  color: rgb(167, 73, 204);
+  background: rgb(217, 167, 236);
+  opacity: 0.8;
+  transition: all 200ms ease-in-out;
 }
 h4 {
   padding: 20px 0 0 5px;
@@ -50,12 +52,14 @@ img {
 .main-temperature {
   font-size: 40px;
 }
+
 .main-image {
   width: 60px;
   margin: 10px;
 }
 .unit {
   font-size: 18px;
+  text-decoration-line: none;
 }
 .description {
   text-transform: capitalize;
