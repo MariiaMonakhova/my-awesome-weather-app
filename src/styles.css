@@ -1,17 +1,16 @@
 body {
   margin: 20px;
   font-family: "Playfair Display", serif;
-  background: #ffffff;
   margin: 130px auto;
   padding: 10px;
-  border-radius: 10px;
   max-width: 900px;
-  box-shadow: rgba(158, 156, 156, 0.2) 0px 2px 2px 0px;
   background: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
 }
-.container-fluid {
+.container {
   border: solid 1mm #eddaf2;
   background: rgb(245, 243, 243);
+  box-shadow: rgba(158, 156, 156, 0.2) 0px 2px 2px 0px;
+  border-radius: 10px;
 }
 h1 {
   position: relative;
@@ -60,4 +59,10 @@ img {
 }
 .description {
   text-transform: capitalize;
+}
+.sourse {
+  padding-left: 20px;
+}
+.box {
+  margin-bottom: 5px;
 }
