@@ -31,7 +31,12 @@
       <div class="main-background">
         <h1>Weather Forecast</h1>
         <form class="search-area">
-          <input type="text" placeholder="Search city" id="text-city" />
+          <input
+            type="text"
+            placeholder="Search city"
+            id="text-city"
+            autocomplete="off"
+          />
           <button>🔎</button>
           <button class="location">Current location</button>
         </form>
@@ -48,7 +53,12 @@
               |
               <a href="#" id="fahrenheit-link">°F</a>
             </span>
-            <img class="main-image" src="images/cloud.png" alt="cloudy" />
+            <img
+              class="main-image"
+              id="icon"
+              src="images/cloud.png"
+              alt="cloudy"
+            />
           </div>
           <div class="col-4">
             <span class="info">
