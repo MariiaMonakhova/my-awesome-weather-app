@@ -1,25 +1,3 @@
-let now = new Date();
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let day = days[now.getDay()];
-let hours = now.getHours();
-if (hours < 10) {
-  hours = `0${hours}`;
-}
-let minutes = now.getMinutes();
-if (minutes < 10) {
-  minutes = `0${minutes}`;
-}
-let today = document.querySelector(".today");
-today.innerHTML = `${day} ${hours}:${minutes}`;
-
 function getWeather(response) {
   console.log(response.data);
   document.querySelector(".temperature").innerHTML = Math.round(
@@ -39,6 +17,7 @@ function getWeather(response) {
   document.querySelector("#wind").innerHTML = `Wind speed: ${Math.round(
     response.data.wind.speed
   )} km/h`;
+  document.querySelector("h4").innerHTML = formatDate(response.data.dt * 1000);
 }
 
 function searchCity(city) {
@@ -56,6 +35,29 @@ function cityOutput(event) {
 let cityEnter = document.querySelector(".search-area");
 cityEnter.addEventListener("click", cityOutput);
 
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  return `Last updated: ${day} ${hours}:${minutes}`;
+}
+
 function showTemperature(response) {
   console.log(response.data);
   document.querySelector(".temperature").innerHTML = Math.round(
@@ -68,13 +70,14 @@ function showTemperature(response) {
   document.querySelector("#feels-like").innerHTML = `Feels like: ${feels}°C`;
   document.querySelector(
     "#humidity"
-  ).innerHTML = `Humidity: ${response.data.main.humidity}`;
+  ).innerHTML = `Humidity: ${response.data.main.humidity}%`;
   document.querySelector(
     "#pressure"
   ).innerHTML = `Pressure: ${response.data.main.pressure} hPa`;
   document.querySelector("#wind").innerHTML = `Wind speed: ${Math.round(
     response.data.wind.speed
   )} km/h`;
+  document.querySelector("h4").innerHTML = formatDate(response.data.dt * 1000);
 }
 
 function handlePosition(response) {
