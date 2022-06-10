@@ -23,9 +23,9 @@ function formatDate(timestamp) {
 
 function getWeather(response) {
   console.log(response.data);
-  document.querySelector(".temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  celsiusTemperature = response.data.main.temp;
+  document.querySelector(".temperature").innerHTML =
+    Math.round(celsiusTemperature);
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector(".description").innerHTML =
     response.data.weather[0].description;
@@ -66,9 +66,9 @@ cityEnter.addEventListener("click", cityOutput);
 
 function showTemperature(response) {
   console.log(response.data);
-  document.querySelector(".temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  celsiusTemperature = response.data.main.temp;
+  document.querySelector(".temperature").innerHTML =
+    Math.round(celsiusTemperature);
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector(".description").innerHTML =
     response.data.weather[0].description;
@@ -107,5 +107,17 @@ function getCurrentLocation() {
 
 let currentLocationButton = document.querySelector(".location");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+function showFahrenheit(event) {
+  event.preventDefault();
+  let temperature = document.querySelector(".temperature");
+  let fahrenheitTemperature = Math.round((celsiusTemperature * 9) / 5 + 32);
+  temperature.innerHTML = fahrenheitTemperature;
+}
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheit);
+
+let celsiusTemperature = null;
 
 searchCity("Seoul");
