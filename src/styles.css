@@ -43,7 +43,8 @@ h4 {
 .day {
   border: solid 1mm #dabbe2;
   margin: 0 auto;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
+  padding: 8px;
   font-family: "Roboto Slab", serif;
 }
 img {
