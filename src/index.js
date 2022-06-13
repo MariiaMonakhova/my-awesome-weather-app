@@ -24,16 +24,16 @@ function formatDate(timestamp) {
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
 
-  let days = ["Mon", "Tue", "Wed", "Thur", "Fri"];
+  let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 
   let forecastHTML = `<div class="row">`;
   days.forEach(function (day) {
     forecastHTML =
       forecastHTML +
       `<div class="col-2 day">
-            <span>${day}</span>
+            <span class="forecast-day">${day}</span>
             <br />
-            <img src="images/rain.png" alt="rain" /><br /><spam>15°</spam>/<spam
+            <img class="forecast-image" src="images/rain.png" alt="rain" /><br /><spam class="max-temp">15°</spam> <spam class="min-temp"
               >5°</spam
             >
           </div>`;

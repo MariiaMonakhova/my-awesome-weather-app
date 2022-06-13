@@ -85,3 +85,12 @@ img {
   text-decoration: none;
   color: #6054e5;
 }
+.min-temp {
+  opacity: 0.8;
+  margin-left: 7px;
+}
+.forecast-image {
+  display: block;
+  margin: 0 auto;
+  margin-top: 18px;
+}
