@@ -80,3 +80,7 @@ img {
 .box {
   margin-bottom: 5px;
 }
+.sourse-link {
+  text-decoration: none;
+  color: #6054e5;
+}
