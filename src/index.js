@@ -52,9 +52,9 @@ function displayForecast(response) {
         `<div class="col-2 day">
             <span class="forecast-day">${formatDay(forecastDay.dt)}</span>
             <br />
-            <img class="forecast-image" src="http://openweathermap.org/img/wn/${
+            <img class="forecast-image" src="img/${
               forecastDay.weather[0].icon
-            }@2x.png" /><br /><spam class="max-temp">${Math.round(
+            }.png" /><br /><spam class="max-temp">${Math.round(
           forecastDay.temp.max
         )}°</spam> <spam class="min-temp"
               >${Math.round(forecastDay.temp.min)}°</spam
@@ -93,10 +93,7 @@ function getWeather(response) {
   )} km/h`;
   document.querySelector("h4").innerHTML = formatDate(response.data.dt * 1000);
   let iconElement = document.querySelector("#icon");
-  iconElement.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
+  iconElement.setAttribute("src", `img/${response.data.weather[0].icon}.png`);
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
   getForecast(response.data.coord);
@@ -138,10 +135,7 @@ function showTemperature(response) {
   )} km/h`;
   document.querySelector("h4").innerHTML = formatDate(response.data.dt * 1000);
   let iconElement = document.querySelector("#icon");
-  iconElement.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
+  iconElement.setAttribute("src", `img/${response.data.weather[0].icon}.png`);
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 

@@ -36,7 +36,7 @@ h4 {
 }
 .forecast {
   border: solid 1mm #dabbe2;
-  padding: 8px;
+  padding: 20px;
   margin: 5px;
   font-family: "Roboto Slab", serif;
 }
@@ -44,11 +44,13 @@ h4 {
   border: solid 1mm #dabbe2;
   margin: 0 auto;
   margin-bottom: 15px;
-  padding: 8px;
+  padding-left: 7px;
   font-family: "Roboto Slab", serif;
 }
 img {
-  width: 30px;
+  width: 40px;
+  position: relative;
+  left: 12px;
 }
 .main-temperature {
   font-size: 40px;
@@ -58,20 +60,11 @@ img {
   width: 60px;
   margin: 10px;
 }
-#celsius-link {
-  text-decoration: none;
-}
-#fahrenheit-link {
-  text-decoration: none;
-}
+
 .unit {
   position: relative;
   font-size: 20px;
   top: -14px;
-}
-.unit .active {
-  color: black;
-  cursor: default;
 }
 
 .description {
