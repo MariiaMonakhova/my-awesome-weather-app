@@ -73,7 +73,6 @@ function getForecast(coordinates) {
 }
 
 function getWeather(response) {
-  console.log(response.data);
   celsiusTemperature = response.data.main.temp;
   document.querySelector(".temperature").innerHTML =
     Math.round(celsiusTemperature);
@@ -115,7 +114,6 @@ let cityEnter = document.querySelector(".search-area");
 cityEnter.addEventListener("click", cityOutput);
 
 function showTemperature(response) {
-  console.log(response.data);
   celsiusTemperature = response.data.main.temp;
   document.querySelector(".temperature").innerHTML =
     Math.round(celsiusTemperature);
@@ -142,7 +140,6 @@ function showTemperature(response) {
 function handlePosition(response) {
   let lat = response.coords.latitude;
   let lon = response.coords.longitude;
-  console.log(response);
   let apiKey = "c72f3fe8e8beb38ac78a224a26b2d893";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showTemperature);
