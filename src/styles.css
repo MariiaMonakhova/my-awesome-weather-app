@@ -1,8 +1,7 @@
 body {
-  margin: 20px;
   font-family: "Playfair Display", serif;
   margin: 130px auto;
-  padding: 10px;
+  padding: 15px;
   max-width: 850px;
   background: #dcb5ff;
 }
@@ -33,12 +32,17 @@ h4 {
   padding: 20px 0 0 5px;
   font-size: 23px;
   font-family: "Roboto Slab", serif;
+  margin-left: 30px;
 }
 .forecast {
   border: solid 1mm #dabbe2;
   padding: 20px;
   margin: 5px;
   font-family: "Roboto Slab", serif;
+}
+.info,
+.description {
+  opacity: 0.7;
 }
 .day {
   border: solid 1mm #dabbe2;
@@ -50,7 +54,7 @@ h4 {
 img {
   width: 40px;
   position: relative;
-  left: 12px;
+  left: 20px;
 }
 .main-temperature {
   font-size: 40px;
