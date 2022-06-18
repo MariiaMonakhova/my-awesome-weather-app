@@ -65,7 +65,9 @@ img {
   text-decoration: none;
 }
 .unit {
-  font-size: 18px;
+  position: relative;
+  font-size: 20px;
+  top: -14px;
 }
 .unit .active {
   color: black;

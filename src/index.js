@@ -161,29 +161,4 @@ function getCurrentLocation() {
 let currentLocationButton = document.querySelector(".location");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-function showFahrenheit(event) {
-  event.preventDefault();
-  let temperature = document.querySelector(".temperature");
-  let fahrenheitTemperature = Math.round((celsiusTemperature * 9) / 5 + 32);
-  temperature.innerHTML = fahrenheitTemperature;
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-}
-
-function showCelsius(event) {
-  event.preventDefault();
-  let temperature = document.querySelector(".temperature");
-  temperature.innerHTML = Math.round(celsiusTemperature);
-  fahrenheitLink.classList.remove("active");
-  celsiusLink.classList.add("active");
-}
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", showFahrenheit);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", showCelsius);
-
-let celsiusTemperature = null;
-
 searchCity("Seoul");
