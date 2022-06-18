@@ -54,9 +54,9 @@ function displayForecast(response) {
             <br />
             <img class="forecast-image" src="img/${
               forecastDay.weather[0].icon
-            }.png" /><br /><spam class="max-temp">${Math.round(
+            }.png" /><br /><spam class="max-temp temperatura">${Math.round(
           forecastDay.temp.max
-        )}°</spam> <spam class="min-temp"
+        )}°</spam> <spam class="min-temp temperatura"
               >${Math.round(forecastDay.temp.min)}°</spam
             >
           </div>`;

@@ -70,7 +70,9 @@ img {
   font-size: 20px;
   top: -14px;
 }
-
+.temperatura {
+  margin-left: 5px;
+}
 .description {
   text-transform: capitalize;
 }
