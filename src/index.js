@@ -42,8 +42,6 @@ function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
-  let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
-
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
     if (index < 5) {
@@ -142,7 +140,10 @@ function handlePosition(response) {
   let lon = response.coords.longitude;
   let apiKey = "c72f3fe8e8beb38ac78a224a26b2d893";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(showTemperature);
+  axios.get(apiUrl).then(function (response) {
+    showTemperature(response);
+    getForecast(response.data.coord); // Fetch the forecast here
+  })
 }
 
 function getCurrentLocation() {
